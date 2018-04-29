@@ -24,7 +24,7 @@ export class DeclarationPage {
 
   declaration = {
     description:null,
-    date:Date,
+    date:"29/04/2018",
     image:this.photo
   };
 
