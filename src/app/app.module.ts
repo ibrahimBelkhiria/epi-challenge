@@ -17,6 +17,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth'
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import {Camera} from "@ionic-native/camera";
+import {DeclarationPage} from "../pages/declaration/declaration";
+import {DeclarationPageModule} from "../pages/declaration/declaration.module";
 
 
 const config = {
@@ -35,31 +38,32 @@ const config = {
     HomePage,
     WelcomePage,
     LoginPage,
-    SignupPage, 
-    TabsPage,
+    SignupPage,
+    TabsPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(config),
-    AngularFireAuthModule,AngularFireDatabaseModule
+    AngularFireAuthModule,AngularFireDatabaseModule,DeclarationPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    
+
     AboutPage,
     ContactPage,
     HomePage,
     WelcomePage,
     LoginPage,
     SignupPage,
-    TabsPage,
+    TabsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Camera
   ]
 })
 export class AppModule {}

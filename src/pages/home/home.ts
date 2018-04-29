@@ -13,11 +13,18 @@ export class HomePage {
 
   }
   logout(){
-    // Remove API token 
+    // Remove API token
     this.app.getRootNav().setRoot(WelcomePage);
-    
+
 }
 ionViewDidLoad() {
   console.log('ionViewDidLoad HomePage');
 }
+
+   goToDeclarations() {
+
+
+    this.navCtrl.push('DeclarationPage');
+
+  }
 }

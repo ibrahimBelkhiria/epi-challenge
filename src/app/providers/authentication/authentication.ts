@@ -6,7 +6,7 @@ import { HomePage } from '../../../pages/home/home';
 
 @Injectable()
 export class Authentication {
-  public navCtrl: NavController
+  public navCtrl: NavController;
   getinfo = {
     displayName :'',
     email :'',
@@ -46,7 +46,7 @@ export class Authentication {
 this.getinfo.photoURL=res.user.photoURL;
 this.getinfo.email = res.user.email;
 this.getinfo.logedin = true;
-      
+
   })
 }
 
